@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class LibraryService {
-  private API_URL = 'https://apidata.mos.ru/v1/datasets/843/rows';
-  private API_KEY = '61e27126-c04d-4e81-bda8-6715f7cf3dee';
+  private API_URL = 'url';
+  private API_KEY = 'key';
 
   constructor(private http: HttpClient) {}
 
