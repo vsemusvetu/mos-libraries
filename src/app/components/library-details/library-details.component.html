@@ -1,0 +1,10 @@
+<div class="details-container">
+  <h2>Карточка библиотеки</h2>
+  <div class="details-grid">
+    <div *ngFor="let item of library | keyvalue" class="detail-item">
+      <span class="detail-key">{{ item.key }}:</span>
+      <span class="detail-value">{{ item.value }}</span>
+    </div>
+  </div>
+  <button (click)="close.emit()">Закрыть</button>
+</div>

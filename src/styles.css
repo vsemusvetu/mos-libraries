@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 20px;
+  max-width: 500px;
+  background: #fafafa;
+}
+input {
+  padding: 6px;
+  font-size: 16px;
+}
+button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}

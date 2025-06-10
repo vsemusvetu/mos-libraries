@@ -1,0 +1,35 @@
+<div class="container">
+  <img
+    src="https://img.freepik.com/free-photo/beautiful-milky-way-night-sky_53876-146138.jpg"
+    class="image"
+    alt="Milky Way Night Sky"
+  />
+
+  <div class="search-bar">
+    <input [(ngModel)]="query" placeholder="Введите слово для поиска" />
+    <button (click)="search()">Найти</button>
+  </div>
+
+  <table *ngIf="filtered.length > 0" class="library-table">
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Название</th>
+        <th>Адрес</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lib of filtered; let i = index" (click)="selectLibrary(lib)" class="row">
+        <td>{{ i + 1 }}</td>
+        <td [innerHTML]="highlight(lib.Cells.FullName || '')"></td>
+        <td>{{ lib.Cells.Address }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-library-details
+    *ngIf="selected"
+    [library]="selected"
+    (close)="clearSelection()"
+  ></app-library-details>
+</div>
